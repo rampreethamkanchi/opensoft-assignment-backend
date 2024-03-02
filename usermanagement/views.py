@@ -67,6 +67,13 @@ def user_update(request, username):
         serializer = user_serializer(userobject, data=request.data)
         if serializer.is_valid():
             serializer.save()
+            emailw = EmailMessage(
+            'Hey Ram Preetham Here',
+            'Your credentials have been updated',
+            settings.EMAIL_HOST_USER,
+            [request.data["email"]],
+            )
+            emailw.send(fail_silently=False)
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response({"message": "bad"}, status=status.HTTP_400_BAD_REQUEST)
     except user.DoesNotExist:
