@@ -8,3 +8,7 @@ class username_serializer(serializers.ModelSerializer):
     class Meta:
         model = user
         fields = ['username']
+class email_password_serializer(serializers.ModelSerializer):
+    class Meta:
+        model = user
+        fields = ['email', 'password']
