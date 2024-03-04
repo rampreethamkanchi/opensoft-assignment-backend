@@ -132,7 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'rampreethamkanchi@gmail.com'
-EMAIL_HOST_PASSWORD = 'odcsonmqiyteuemm'   
+EMAIL_HOST_USER = '' # Enter your email id here
+EMAIL_HOST_PASSWORD = '' # Enter your password here
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
 
